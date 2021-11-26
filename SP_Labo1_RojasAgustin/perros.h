@@ -69,13 +69,14 @@ int ePerrito_getID(ePerrito* this);
  */
 int ePerrito_setNombre(ePerrito* this, char* nombre);
 /**
- * @fn char ePerrito_getNombre*(ePerrito*)
- * @brief Guarda el valor del campo nombre en una variable y la retorna
+ * @fn int ePerrito_getNombre*(ePerrito*)
+ * @brief Guarda el valor del campo nombre en una variable
  *
  * @param this ePerrito* el puntero al perro
- * @return nombre char* donde se guarda el dato
+ * @param nombre char* donde se guarda el dato
+ * @return retorno int 0 si lo puede guardar.-1 si hay un error
  */
-char* ePerrito_getNombre(ePerrito* this);
+int ePerrito_getNombre(ePerrito* this,char* nombre);
 /**
  * @fn int ePerrito_setEdad(ePerrito*, int)
  * @brief Guarda el valor del parametro edad en el campo edad del puntero a ePerrito
@@ -99,17 +100,18 @@ int ePerrito_getEdad(ePerrito* this);
  *
  * @param this ePerrito* el puntero al perro
  * @param raza char* el nombre a cargar
- * @return retorno int 0 si lo puede cargar.-1 si hay un erro
+ * @return retorno int 0 si lo puede cargar.-1 si hay un error
  */
 int ePerrito_setRaza(ePerrito* this, char* raza);
 /**
- * @fn char ePerrito_getRaza*(ePerrito*)
- * @brief Guarda el valor del campo raza en una variable y la retorna
+ * @fn int ePerrito_getRaza*(ePerrito*)
+ * @brief Guarda el valor del campo raza en una variable
  *
  * @param this ePerrito* el puntero al perro
- * @return raza char* donde se guarda el dato
+ * @param raza char* donde se guarda el dato
+ * @return retorno int 0 si lo puede guardar.-1 si hay un error
  */
-char* ePerrito_getRaza(ePerrito* this);
+int ePerrito_getRaza(ePerrito* this,char* raza);
 /**
  * @fn int ePerrito_setPeso(ePerrito*, float)
  * @brief Guarda el valor del parametro peso en el campo peso del puntero a ePerrito

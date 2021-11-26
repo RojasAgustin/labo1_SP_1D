@@ -21,12 +21,23 @@ int cargarTexto(char* path , LinkedList* listadoPerros){
 }
 int listadoPerros(LinkedList* listadoPerros){
 	int retorno =-1;
+	int id;
+	char nombre[21];
+	int edad;
+	char raza[21];
+	float peso;
 	ePerrito* pPerro = NULL;
 	if(listadoPerros!=NULL){
 		printf("%-10s %-21s %-10s %-10s %-21s\n","ID","Nombre","Peso","Edad","Raza");
 		for(int i=0;i<ll_len(listadoPerros);i++){
+			//Usando los getters
 			pPerro = ll_get(listadoPerros, i);
-			printf("%-10d %-21s %-10.2f %-10d %-21s\n",pPerro->id,pPerro->nombre,pPerro->peso,pPerro->edad,pPerro->raza);
+			id = ePerrito_getID(pPerro);
+			ePerrito_getNombre(pPerro,nombre);
+			edad = ePerrito_getEdad(pPerro);
+			ePerrito_getRaza(pPerro,raza);
+			peso = ePerrito_getPeso(pPerro);
+			printf("%-10d %-21s %-10.2f %-10d %-21s\n",id,nombre,peso,edad,raza);
 		}
 		retorno = 0;
 	}

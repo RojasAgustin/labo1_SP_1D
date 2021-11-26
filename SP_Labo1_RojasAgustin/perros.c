@@ -38,14 +38,15 @@ int ePerrito_setNombre(ePerrito* this, char* nombre)
 	return seCargo;
 }
 
-char* ePerrito_getNombre(ePerrito* this)
+int ePerrito_getNombre(ePerrito* this, char* nombre)
 {
-	char* nombre = NULL;
+	int retorno = -1;
 	if(this != NULL)
 	{
-		nombre = this->nombre;
+		retorno = 0;
+		strcpy(nombre,this->nombre);
 	}
-	return nombre;
+	return retorno;
 }
 
 int ePerrito_setEdad(ePerrito* this, int edad)
@@ -118,14 +119,15 @@ int ePerrito_setRaza(ePerrito* this, char* raza)
 	return seCargo;
 }
 
-char* ePerrito_getRaza(ePerrito* this)
+int ePerrito_getRaza(ePerrito* this,char* raza)
 {
-	char* raza = NULL;
+	int retorno = -1;
 	if(this != NULL)
 	{
-		raza = this->raza;
+		retorno = 0;
+		strcpy(raza,this->raza);
 	}
-	return raza;
+	return retorno;
 }
 int ePerrito_sortearPorNombre(void* perro1,void* perro2){
 	int retorno =1;
