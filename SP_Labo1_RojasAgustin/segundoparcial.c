@@ -113,6 +113,7 @@ int main(void) {
             	else{
             		printf("No hay perros che\n");
             	}
+            	system("pause");
             	break;
             case 7:
             	ll_deleteLinkedList(listaPerros);
