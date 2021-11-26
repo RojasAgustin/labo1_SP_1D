@@ -94,6 +94,7 @@ int main(void) {
 					else{
 						printf("No se mapeo todavia.\n");
 					}
+					system("pause");
 					break;
             	}
             	else{
