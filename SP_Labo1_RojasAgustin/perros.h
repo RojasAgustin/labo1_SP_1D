@@ -139,6 +139,7 @@ float ePerrito_getPeso(ePerrito* this);
  * 					   0 Si son iguales
  * 					   -1 Si el nombre del segundo es mayor
  */
+
 int ePerrito_sortearPorNombre(void* perro1,void* perro2);
 /**
  * @fn int ePerrito_laQueMapea(void*)
@@ -171,6 +172,23 @@ LinkedList* ePerrito_generarListaDeGalgos(LinkedList* listadoPerros);
  * @param this ePerrito* El puntero al perro
  */
 void ePerrito_destructor(ePerrito* this);
+/**
+ * @fn int ePerrito_setRacion(ePerrito*, float)
+ * @brief Guarda el valor del parametro racion en el campo de la comida del puntero a ePerrito
+ *
+ * @param this ePerrito* el puntero al perro
+ * @param racion float la racion a cargar
+ * @return retorno int 0 si lo puede cargar.-1 si hay un error
+ */
+int ePerrito_setRacion(ePerrito* this, float racion);
+/**
+ * @fn float ePerrito_getRacion(ePerrito*)
+ * @brief Guarda el valor del campo de la racion en una variable y la retorna
+ *
+ * @param this ePerrito* el puntero al perro
+ * @return racion float donde se guarda el dato
+ */
+float ePerrito_getRacion(ePerrito* this);
 
 
 #endif /* PERROS_H_ */

@@ -129,6 +129,25 @@ int ePerrito_getRaza(ePerrito* this,char* raza)
 	}
 	return retorno;
 }
+int ePerrito_setRacion(ePerrito* this, float racion)
+{
+	int seCargo = 0;
+	if(this != NULL)
+	{
+		this->cantidadComidaRacion = racion;
+		seCargo = 1;
+	}
+	return seCargo;
+}
+float ePerrito_getRacion(ePerrito* this)
+{
+	float racion;
+	if(this != NULL)
+	{
+		racion = this->cantidadComidaRacion;
+	}
+	return racion;
+}
 int ePerrito_sortearPorNombre(void* perro1,void* perro2){
 	int retorno =1;
 	ePerrito* perroUno;
