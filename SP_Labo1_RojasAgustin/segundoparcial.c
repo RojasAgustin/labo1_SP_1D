@@ -56,7 +56,7 @@ int main(void) {
             		listadoPerros(listaPerros);
             	}
             	else{
-            		printf("No hay perros che\n");
+            		printf("No hay perros cargados\n");
             	}
             	system("pause");
             	break;
@@ -67,7 +67,7 @@ int main(void) {
             		printf("Se calcularon las raciones de comida de los perros\n");
             	}
             	else{
-            		printf("No hay perros che\n");
+            		printf("No hay perros cargados\n");
             	}
             	system("pause");
             	break;
@@ -81,7 +81,7 @@ int main(void) {
             		}
             	}
             	else{
-            		printf("No hay perros che\n");
+            		printf("No hay perros cargados\n");
             	}
             	system("pause");
             	break;
@@ -99,7 +99,7 @@ int main(void) {
 					break;
             	}
             	else{
-            		printf("No hay perros che\n");
+            		printf("No hay perros cargados\n");
             	}
             	system("pause");
             	break;
@@ -113,7 +113,7 @@ int main(void) {
             		}
             	}
             	else{
-            		printf("No hay perros che\n");
+            		printf("No hay perros cargados\n");
             	}
             	system("pause");
             	break;
