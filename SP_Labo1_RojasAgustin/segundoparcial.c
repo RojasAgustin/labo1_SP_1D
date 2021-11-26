@@ -33,7 +33,7 @@ int main(void) {
 							"5-Filtrar galgos\n"
 							"6-Guardar galgos en galgosFlaquitos.csv\n"
 							"7-Salir\n"
-							"Elija una opcion: ", "\nError. Ingrese una opcion entre 1 y 6", 1, 6);
+							"Elija una opcion: ", "\nError. Ingrese una opcion entre 1 y 7", 1, 7);
 
         switch(option)
         {
@@ -63,7 +63,7 @@ int main(void) {
             	if(ll_len(listaPerros) > 0){
             		ll_map(listaPerros, ePerrito_laQueMapea);
             		banderaMapeado = 1;
-            		printf("Se mapeó con exito\n");
+            		printf("Se calcularon las raciones de comida de los perros\n");
             	}
             	else{
             		printf("No hay perros che\n");
@@ -88,6 +88,7 @@ int main(void) {
 				if(ll_len(listaPerros) > 0){
 					if(banderaMapeado == 1){
 						listaGalgos = ePerrito_generarListaDeGalgos(listaPerros);
+						printf("Estos son los galgos que cumplen los requisitos:  \n");
 						listadoPerrosConRacion(listaGalgos);
 					}
 					else{

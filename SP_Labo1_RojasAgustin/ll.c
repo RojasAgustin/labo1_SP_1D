@@ -514,6 +514,14 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
     }
     return returnAux;
 }
+/**
+ * @fn int ll_map(LinkedList*, int(*)(void*))
+ * @brief Ejecuta la funcion que recibe como parametro para cada elemento de la lista
+ *
+ * @param this Puntero a la lista
+ * @param pFunc La funcion que calcula las raciones de comida
+ * @return
+ */
 int ll_map(LinkedList* this, int (*pFunc)(void*)){
     int retorno =-1;
 	void* auxElemento = NULL;
@@ -529,6 +537,15 @@ int ll_map(LinkedList* this, int (*pFunc)(void*)){
 	}
     return retorno;
 }
+/**
+ * @fn LinkedList ll_filter*(LinkedList*, int(*)(void*))
+ * @brief Crea una lista nueva con los elementos que cumplan una serie de condiciones,
+ * que se verifican en la funcion que recibe como parametro
+ *
+ * @param this Puntero a la lista
+ * @param pFunc La funcion que verifica si se cumplen las condiciones
+ * @return
+ */
 LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*)){
     LinkedList* listaNueva = NULL;
     void* auxElemento = NULL;
@@ -539,7 +556,7 @@ LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*)){
             for(int i=0;i<tam;i++){
             	auxElemento=ll_get(this, i);
                 if(auxElemento!=NULL){
-                    if(pFunc(auxElemento)==1){
+                    if(pFunc(auxElemento)==1){ // si > 10 años | < 200 comida | galgo
                         ll_add(listaNueva,auxElemento);
                     }
                 }

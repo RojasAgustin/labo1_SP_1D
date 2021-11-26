@@ -21,7 +21,7 @@ int cargarTexto(char* path , LinkedList* listadoPerros){
 }
 int listadoPerros(LinkedList* listadoPerros){
 	int retorno =-1;
-	ePerrito* pPerro;
+	ePerrito* pPerro = NULL;
 	if(listadoPerros!=NULL){
 		printf("%-10s %-21s %-10s %-10s %-21s\n","ID","Nombre","Peso","Edad","Raza");
 		for(int i=0;i<ll_len(listadoPerros);i++){
@@ -34,7 +34,7 @@ int listadoPerros(LinkedList* listadoPerros){
 }
 int listadoPerrosConRacion(LinkedList* listadoPerros){
 	int retorno =-1;
-	ePerrito* pPerro;
+	ePerrito* pPerro = NULL;
 	if(listadoPerros!=NULL){
 		printf("%-10s %-21s %-10s %-10s %-21s %-10s\n","ID","Nombre","Peso","Edad","Raza","Racion");
 		for(int i=0;i<ll_len(listadoPerros);i++){
@@ -48,7 +48,7 @@ int listadoPerrosConRacion(LinkedList* listadoPerros){
 
 int guardarGalgos(char* path , LinkedList* listadoGalgos){
 	int retorno =-1;
-	ePerrito* galgo;
+	ePerrito* galgo = NULL;
 	FILE* pFile;
 	if(path != NULL && listadoGalgos!=NULL){
 		pFile = fopen(path,"w");
